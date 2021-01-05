@@ -52,6 +52,9 @@ namespace Wasteland2SaveEditor.Character
 
             string rawTraitsData = rawData.GetBetween(traitsFlag.Start, traitsFlag.End);
 
+            if (string.IsNullOrEmpty(rawTraitsData))
+                return;
+
             string[] traitsData = rawTraitsData.Split(pairFlag.End + pairFlag.Start);
             traitsData[0].TrimStart(pairFlag.Start);
             traitsData[traitsData.Length - 1].TrimEnd(pairFlag.End);
