@@ -135,7 +135,9 @@ namespace Wasteland2SaveEditor.Editor
         {
             DateTime now = DateTime.Now;
 
-            string backupPath = savePath.Remove(savePath.LastIndexOf('.')) + $"_{now.Hour}.{now.Minute}.{now.Second}-{now.ToShortDateString()}.backup";
+            string date = $"{now.Day.ToString().PadLeft(2,'0')}-{now.Month.ToString().PadLeft(2, '0')}-{now.Year}";
+
+            string backupPath = savePath.Remove(savePath.LastIndexOf('.')) + $"_{now.Hour}.{now.Minute}.{now.Second}-{date}.backup";
 
             File.Copy(savePath, backupPath, false);
         }
