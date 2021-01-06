@@ -216,7 +216,7 @@ namespace Wasteland2SaveEditor
         private void num_animalWhisperer_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.AnimalWhisperer.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_animalWhisperer.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_animalWhisperer.Value, index, saveEditor.Config.CheatModeEnabled);
             num_animalWhisperer.Value = saveEditor.Characters[currentCharacterIndex].Skills.AnimalWhisperer.Level;
 
             UpdateSkillPoints();
@@ -225,7 +225,7 @@ namespace Wasteland2SaveEditor
         private void num_barter_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Barter.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_barter.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_barter.Value, index, saveEditor.Config.CheatModeEnabled);
             num_barter.Value = saveEditor.Characters[currentCharacterIndex].Skills.Barter.Level;
 
             UpdateSkillPoints();
@@ -234,7 +234,7 @@ namespace Wasteland2SaveEditor
         private void num_bruteForce_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.BruteForce.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_bruteForce.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_bruteForce.Value, index, saveEditor.Config.CheatModeEnabled);
             num_bruteForce.Value = saveEditor.Characters[currentCharacterIndex].Skills.BruteForce.Level;
 
             UpdateSkillPoints();
@@ -243,7 +243,7 @@ namespace Wasteland2SaveEditor
         private void num_hardAss_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.HardAss.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_hardAss.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_hardAss.Value, index, saveEditor.Config.CheatModeEnabled);
             num_hardAss.Value = saveEditor.Characters[currentCharacterIndex].Skills.HardAss.Level;
 
             UpdateSkillPoints();
@@ -252,7 +252,7 @@ namespace Wasteland2SaveEditor
         private void num_kissAss_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.KissAss.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_kissAss.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_kissAss.Value, index, saveEditor.Config.CheatModeEnabled);
             num_kissAss.Value = saveEditor.Characters[currentCharacterIndex].Skills.KissAss.Level;
 
             UpdateSkillPoints();
@@ -261,7 +261,7 @@ namespace Wasteland2SaveEditor
         private void num_leadership_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Leadership.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_leadership.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_leadership.Value, index, saveEditor.Config.CheatModeEnabled);
             num_leadership.Value = saveEditor.Characters[currentCharacterIndex].Skills.Leadership.Level;
 
             UpdateSkillPoints();
@@ -270,7 +270,7 @@ namespace Wasteland2SaveEditor
         private void num_outdoorsman_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Outdoorsman.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_outdoorsman.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_outdoorsman.Value, index, saveEditor.Config.CheatModeEnabled);
             num_outdoorsman.Value = saveEditor.Characters[currentCharacterIndex].Skills.Outdoorsman.Level;
 
             UpdateSkillPoints();
@@ -279,7 +279,7 @@ namespace Wasteland2SaveEditor
         private void num_perception_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Perception.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_perception.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_perception.Value, index, saveEditor.Config.CheatModeEnabled);
             num_perception.Value = saveEditor.Characters[currentCharacterIndex].Skills.Perception.Level;
 
             UpdateSkillPoints();
@@ -288,7 +288,7 @@ namespace Wasteland2SaveEditor
         private void num_smartAss_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.SmartAss.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_smartAss.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_smartAss.Value, index, saveEditor.Config.CheatModeEnabled);
             num_smartAss.Value = saveEditor.Characters[currentCharacterIndex].Skills.SmartAss.Level;
 
             UpdateSkillPoints();
@@ -297,7 +297,7 @@ namespace Wasteland2SaveEditor
         private void num_weaponsmithing_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Weaponsmithing.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_weaponsmithing.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_weaponsmithing.Value, index, saveEditor.Config.CheatModeEnabled);
             num_weaponsmithing.Value = saveEditor.Characters[currentCharacterIndex].Skills.Weaponsmithing.Level;
 
             UpdateSkillPoints();
@@ -306,7 +306,7 @@ namespace Wasteland2SaveEditor
         private void num_swFolklore_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.SouthwesternFolklore.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_swFolklore.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_swFolklore.Value, index, saveEditor.Config.CheatModeEnabled);
             num_swFolklore.Value = saveEditor.Characters[currentCharacterIndex].Skills.SouthwesternFolklore.Level;
 
             UpdateSkillPoints();
@@ -315,7 +315,7 @@ namespace Wasteland2SaveEditor
         private void num_combatShooting_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.CombatShooting.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_combatShooting.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_combatShooting.Value, index, saveEditor.Config.CheatModeEnabled);
             num_combatShooting.Value = saveEditor.Characters[currentCharacterIndex].Skills.CombatShooting.Level;
 
             UpdateSkillPoints();
@@ -324,7 +324,7 @@ namespace Wasteland2SaveEditor
         private void num_assaultRifles_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.AssaultRifles.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_assaultRifles.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_assaultRifles.Value, index, saveEditor.Config.CheatModeEnabled);
             num_assaultRifles.Value = saveEditor.Characters[currentCharacterIndex].Skills.AssaultRifles.Level;
 
             UpdateSkillPoints();
@@ -333,7 +333,7 @@ namespace Wasteland2SaveEditor
         private void num_bladed_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.BladedWeapons.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_bladed.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_bladed.Value, index, saveEditor.Config.CheatModeEnabled);
             num_bladed.Value = saveEditor.Characters[currentCharacterIndex].Skills.BladedWeapons.Level;
 
             UpdateSkillPoints();
@@ -342,7 +342,7 @@ namespace Wasteland2SaveEditor
         private void num_blunt_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.BluntWeapons.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_blunt.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_blunt.Value, index, saveEditor.Config.CheatModeEnabled);
             num_blunt.Value = saveEditor.Characters[currentCharacterIndex].Skills.BluntWeapons.Level;
 
             UpdateSkillPoints();
@@ -351,7 +351,7 @@ namespace Wasteland2SaveEditor
         private void num_brawling_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Brawling.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_brawling.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_brawling.Value, index, saveEditor.Config.CheatModeEnabled);
             num_brawling.Value = saveEditor.Characters[currentCharacterIndex].Skills.Brawling.Level;
 
             UpdateSkillPoints();
@@ -360,7 +360,7 @@ namespace Wasteland2SaveEditor
         private void num_energy_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.EnergyWeapons.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_energy.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_energy.Value, index, saveEditor.Config.CheatModeEnabled);
             num_energy.Value = saveEditor.Characters[currentCharacterIndex].Skills.EnergyWeapons.Level;
 
             UpdateSkillPoints();
@@ -369,7 +369,7 @@ namespace Wasteland2SaveEditor
         private void num_handguns_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Handguns.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_handguns.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_handguns.Value, index, saveEditor.Config.CheatModeEnabled);
             num_handguns.Value = saveEditor.Characters[currentCharacterIndex].Skills.Handguns.Level;
 
             UpdateSkillPoints();
@@ -378,7 +378,7 @@ namespace Wasteland2SaveEditor
         private void num_heavy_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.HeavyWeapons.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_heavy.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_heavy.Value, index, saveEditor.Config.CheatModeEnabled);
             num_heavy.Value = saveEditor.Characters[currentCharacterIndex].Skills.HeavyWeapons.Level;
 
             UpdateSkillPoints();
@@ -387,7 +387,7 @@ namespace Wasteland2SaveEditor
         private void num_shotguns_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Shotguns.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_shotguns.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_shotguns.Value, index, saveEditor.Config.CheatModeEnabled);
             num_shotguns.Value = saveEditor.Characters[currentCharacterIndex].Skills.Shotguns.Level;
 
             UpdateSkillPoints();
@@ -396,7 +396,7 @@ namespace Wasteland2SaveEditor
         private void num_sniperRifles_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.SniperRifles.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_sniperRifles.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_sniperRifles.Value, index, saveEditor.Config.CheatModeEnabled);
             num_sniperRifles.Value = saveEditor.Characters[currentCharacterIndex].Skills.SniperRifles.Level;
 
             UpdateSkillPoints();
@@ -405,7 +405,7 @@ namespace Wasteland2SaveEditor
         private void num_submachineGuns_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.SubmachineGuns.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_submachineGuns.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_submachineGuns.Value, index, saveEditor.Config.CheatModeEnabled);
             num_submachineGuns.Value = saveEditor.Characters[currentCharacterIndex].Skills.SubmachineGuns.Level;
 
             UpdateSkillPoints();
@@ -414,7 +414,7 @@ namespace Wasteland2SaveEditor
         private void num_alarmDisarming_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.AlarmDisarming.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_alarmDisarming.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_alarmDisarming.Value, index, saveEditor.Config.CheatModeEnabled);
             num_alarmDisarming.Value = saveEditor.Characters[currentCharacterIndex].Skills.AlarmDisarming.Level;
 
             UpdateSkillPoints();
@@ -423,7 +423,7 @@ namespace Wasteland2SaveEditor
         private void num_computerScience_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.ComputerScience.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_computerScience.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_computerScience.Value, index, saveEditor.Config.CheatModeEnabled);
             num_computerScience.Value = saveEditor.Characters[currentCharacterIndex].Skills.ComputerScience.Level;
 
             UpdateSkillPoints();
@@ -432,7 +432,7 @@ namespace Wasteland2SaveEditor
         private void num_demolitions_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Demolitions.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_demolitions.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_demolitions.Value, index, saveEditor.Config.CheatModeEnabled);
             num_demolitions.Value = saveEditor.Characters[currentCharacterIndex].Skills.Demolitions.Level;
 
             UpdateSkillPoints();
@@ -441,7 +441,7 @@ namespace Wasteland2SaveEditor
         private void num_fieldMedic_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.FieldMedic.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_fieldMedic.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_fieldMedic.Value, index, saveEditor.Config.CheatModeEnabled);
             num_fieldMedic.Value = saveEditor.Characters[currentCharacterIndex].Skills.FieldMedic.Level;
 
             UpdateSkillPoints();
@@ -450,7 +450,7 @@ namespace Wasteland2SaveEditor
         private void num_lockpicking_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Lockpicking.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_lockpicking.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_lockpicking.Value, index, saveEditor.Config.CheatModeEnabled);
             num_lockpicking.Value = saveEditor.Characters[currentCharacterIndex].Skills.Lockpicking.Level;
 
             UpdateSkillPoints();
@@ -459,7 +459,7 @@ namespace Wasteland2SaveEditor
         private void num_mechRepair_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.MechanicalRepair.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_mechRepair.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_mechRepair.Value, index, saveEditor.Config.CheatModeEnabled);
             num_mechRepair.Value = saveEditor.Characters[currentCharacterIndex].Skills.MechanicalRepair.Level;
 
             UpdateSkillPoints();
@@ -468,7 +468,7 @@ namespace Wasteland2SaveEditor
         private void num_safecracking_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Safecracking.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_safecracking.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_safecracking.Value, index, saveEditor.Config.CheatModeEnabled);
             num_safecracking.Value = saveEditor.Characters[currentCharacterIndex].Skills.Safecracking.Level;
 
             UpdateSkillPoints();
@@ -477,7 +477,7 @@ namespace Wasteland2SaveEditor
         private void num_surgeon_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.Surgeon.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_surgeon.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_surgeon.Value, index, saveEditor.Config.CheatModeEnabled);
             num_surgeon.Value = saveEditor.Characters[currentCharacterIndex].Skills.Surgeon.Level;
 
             UpdateSkillPoints();
@@ -486,7 +486,7 @@ namespace Wasteland2SaveEditor
         private void num_toasterRepair_ValueChanged(object sender, EventArgs e)
         {
             int index = saveEditor.Characters[currentCharacterIndex].Skills.ToasterRepair.Index;
-            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_toasterRepair.Value, index);
+            saveEditor.Characters[currentCharacterIndex].ChangeSkillLevel((int)num_toasterRepair.Value, index, saveEditor.Config.CheatModeEnabled);
             num_toasterRepair.Value = saveEditor.Characters[currentCharacterIndex].Skills.ToasterRepair.Level;
 
             UpdateSkillPoints();
