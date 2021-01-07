@@ -1366,6 +1366,7 @@
             this.num_skillPoints.Name = "num_skillPoints";
             this.num_skillPoints.Size = new System.Drawing.Size(63, 23);
             this.num_skillPoints.TabIndex = 18;
+            this.num_skillPoints.ValueChanged += new System.EventHandler(this.num_skillPoints_ValueChanged);
             // 
             // label_skillPoints
             // 
