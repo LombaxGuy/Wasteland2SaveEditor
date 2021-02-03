@@ -48,7 +48,7 @@ namespace Wasteland2SaveEditor.Character
                 data = data.InsertBetween(flags.skills.Start, flags.skills.End, skills.Data); // skills data
                 data = data.InsertBetween(flags.traits.Start, flags.traits.End, traits.Data); // traits data
 
-                data = data.InsertBetween(flags.attributePoints.Start, flags.attributePoints.End, Math.Clamp(attributePoints, 0, attributes.All.Count * Attribute.maximumPoints - attributes.All.Count).ToString());
+                data = data.InsertBetween(flags.attributePoints.Start, flags.attributePoints.End, Math.Clamp(attributePoints, 0, attributes.All.Length * Attribute.maximumPoints - attributes.All.Length).ToString());
                 data = data.InsertBetween(flags.skillPoints.Start, flags.skillPoints.End, Math.Clamp(skillPoints, 0, skills.All.Count * Skill.maximumPoints).ToString());
                 data = data.InsertBetween(flags.traitPoints.Start, flags.traitPoints.End, Math.Clamp(perkPoints, 0, existingPerks.All.Count).ToString());
 

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using Wasteland2SaveEditor.Extensions;
 
 namespace Wasteland2SaveEditor.Character
@@ -7,9 +7,10 @@ namespace Wasteland2SaveEditor.Character
     {
         private Flag attributesFlag = new Flag("attributes");
         private Flag pairFlag = new Flag("pair");
+        private Flag keyFlag = new Flag("key");
         private Flag valueFlag = new Flag("value");
 
-        private List<Attribute> all = new List<Attribute>();
+        private Attribute[] all = new Attribute[7];
 
         public Attribute Coordination { get => all[0]; }
         public Attribute Luck { get => all[1]; }
@@ -19,7 +20,7 @@ namespace Wasteland2SaveEditor.Character
         public Attribute Intelligence { get => all[5]; }
         public Attribute Charisma { get => all[6]; }
 
-        public List<Attribute> All { get => all; }
+        public Attribute[] All { get => all; }
 
         public string Data
         {
@@ -27,7 +28,7 @@ namespace Wasteland2SaveEditor.Character
             {
                 string data = "";
 
-                for (int i = 0; i < all.Count; i++)
+                for (int i = 0; i < all.Length; i++)
                 {
                     data += all[i].Data;
                 }
@@ -41,16 +42,44 @@ namespace Wasteland2SaveEditor.Character
             string rawAttributeData = rawCharacterData.GetBetween(attributesFlag.Start, attributesFlag.End);
 
             string[] attributeData = rawAttributeData.Split(pairFlag.End + pairFlag.Start);
-            attributeData[0].TrimStart(pairFlag.Start);
-            attributeData[attributeData.Length - 1].TrimEnd(pairFlag.End);
 
-            all.Add(new Attribute("coordination", int.Parse(attributeData[0].GetBetween(valueFlag.Start, valueFlag.End))));
-            all.Add(new Attribute("luck", int.Parse(attributeData[1].GetBetween(valueFlag.Start, valueFlag.End))));
-            all.Add(new Attribute("awareness", int.Parse(attributeData[2].GetBetween(valueFlag.Start, valueFlag.End))));
-            all.Add(new Attribute("strength", int.Parse(attributeData[3].GetBetween(valueFlag.Start, valueFlag.End))));
-            all.Add(new Attribute("speed", int.Parse(attributeData[4].GetBetween(valueFlag.Start, valueFlag.End))));
-            all.Add(new Attribute("intelligence", int.Parse(attributeData[5].GetBetween(valueFlag.Start, valueFlag.End))));
-            all.Add(new Attribute("charisma", int.Parse(attributeData[6].GetBetween(valueFlag.Start, valueFlag.End))));
+            for (int i = 0; i < attributeData.Length; i++)
+            {
+                string key = attributeData[i].GetBetween(keyFlag.Start, keyFlag.End);
+                int value = int.Parse(attributeData[i].GetBetween(valueFlag.Start, valueFlag.End));
+
+                all[GetIndexFromKey(key)] = new Attribute(key, value);
+            }
+        }
+
+        private int GetIndexFromKey(string key)
+        {
+            switch (key)
+            {
+                case "coordination":
+                    return 0;
+
+                case "luck":
+                    return 1;
+
+                case "awareness":
+                    return 2;
+
+                case "strength":
+                    return 3;
+
+                case "speed":
+                    return 4;
+
+                case "intelligence":
+                    return 5;
+
+                case "charisma":
+                    return 6;
+
+                default:
+                    throw new Exception($"Attribute key '{key}' does not exist!");
+            }
         }
     }
 }
