@@ -13,9 +13,11 @@ namespace Wasteland2SaveEditor.Collections
         {
             all.Add(new Trait("Trait_AnimalHusbandry", "Animal Husbandry"));
             all.Add(new Trait("Trait_Ascetic", "Ascetic"));
+            all.Add(new Trait("Trait_Asshole", "Asshole")); // new, might not work
             all.Add(new Trait("Trait_BrittleBones", "Brittle Bones"));
             all.Add(new Trait("Trait_DelayedGratification", "Delayed Gratification"));
             all.Add(new Trait("Trait_Disparnumerophobia", "Disparnumerophobia"));
+            all.Add(new Trait("Trait_FaintingGoat", "Fainting Goat")); // new, might not work
             all.Add(new Trait("Trait_HeavyHanded", "Heavy Handed"));
             all.Add(new Trait("Trait_ManicDepressive", "Manic Depressive"));
             all.Add(new Trait("Trait_Hypochondriac", "Mysophobic"));

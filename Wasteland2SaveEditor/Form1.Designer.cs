@@ -1509,7 +1509,7 @@
             this.checkBox_quirks.FormattingEnabled = true;
             this.checkBox_quirks.Location = new System.Drawing.Point(13, 44);
             this.checkBox_quirks.Name = "checkBox_quirks";
-            this.checkBox_quirks.Size = new System.Drawing.Size(213, 310);
+            this.checkBox_quirks.Size = new System.Drawing.Size(213, 346);
             this.checkBox_quirks.Sorted = true;
             this.checkBox_quirks.TabIndex = 0;
             this.checkBox_quirks.SelectedIndexChanged += new System.EventHandler(this.checkBox_quirks_SelectedIndexChanged);
